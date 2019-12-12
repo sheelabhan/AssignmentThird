@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.sheela.assignmentthird.MainActivity;
 import com.sheela.assignmentthird.R;
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
@@ -64,5 +66,18 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
             etAddress.requestFocus();
             return;
         }
+
+
+        if (btnSave.getId() == R.id.btnSave) {
+            String fullname, age, address;
+            fullname = etFullName.getText().toString();
+            age = etAge.getText().toString();
+            address = etAddress.getText().toString();
+
+            Toast.makeText(getContext(), "Student added", Toast.LENGTH_SHORT).show();
+
+
+        }
     }
 }
+
